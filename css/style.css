@@ -4,7 +4,7 @@
 500 - medium
 700 - bold
 900 - black
- */
+*/
 
 /* ----- Глобальные стили ----- */
 
@@ -79,7 +79,8 @@ button {
 
 .user-navigation input:focus-within + label,
 .substrate input:focus-within + label,
-.feedback-pop-up input:focus-within + label {
+.feedback-pop-up input:focus-within + label,
+.feedback-pop-up textarea:focus-within + label {
   display: block;
 }
 
@@ -90,7 +91,8 @@ button {
 
 .user-navigation input:focus,
 .substrate input:focus,
-.feedback-pop-up input:focus {
+.feedback-pop-up input:focus,
+.feedback-pop-up textarea:focus {
   outline: none;
   box-shadow: 0 0 0 2px #8fbdec;
 }

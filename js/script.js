@@ -66,7 +66,7 @@ window.addEventListener('keydown', function(evt) {
 });
 
 
-/* --------------------- Слайдер ----------------------- */
+/* -------------- Слайдер на главной ---------------- */
 
 let btn1 = document.querySelector('.slide-btn-1');
 let btn2 = document.querySelector('.slide-btn-2');
