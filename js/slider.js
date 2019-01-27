@@ -1,8 +1,8 @@
 /* -------------- Слайдер на главной ---------------- */
 
-/* Установить стандартное время показа слайда */
+// Установить стандартное время показа слайда
 let sliderTime = 5000;
-/* Установить задержку смены слайдов после клика юзера */
+// Установить задержку смены слайдов после клика юзера
 let sliderDelay = 10000;
 
 let btn1 = document.querySelector('.slide-btn-1');
@@ -71,7 +71,7 @@ function showNext() {
   }
 }
 
-/* ручное переключение слайдов */
+// ручное переключение слайдов
 let switcher = document.querySelector('.slides-switches');
 switcher.addEventListener('click', function(evt) {
 
@@ -91,5 +91,5 @@ switcher.addEventListener('click', function(evt) {
   }, sliderDelay);
 });
 
-/* Запустить слайдер в цикл */
+// Запустить слайдер в цикл
 var timerId = setInterval(showNext, sliderTime);
