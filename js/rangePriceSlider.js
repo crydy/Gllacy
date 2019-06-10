@@ -90,9 +90,19 @@ function moveThumb(evt) {
     catchUnderCursor(evt.clientX);
   }
   
-  // обрываем прослушку движения при отжатии мыши
+  // оборвать прослушку движения при отжатии мыши
   document.body.onmouseup = function() {
     document.body.removeEventListener('mousemove', moveAt);
+    document.body.onmouseleave = null;
+    document.body.onmouseup = null;
+  }
+  // оборвать прослушку движения при ухода курсора с вьюпорта
+  // (устраняется глюк с прилипанием ползунка к курсору,
+  // в случае, если "отжатие мыши" произошло за пределами
+  // окна браузера и не произошло событие mouseup)
+  document.body.onmouseleave = function() {
+    document.body.removeEventListener('mousemove', moveAt);
+    document.body.onmouseleave = null;
     document.body.onmouseup = null;
   }
 }
